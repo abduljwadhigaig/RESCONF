@@ -53,24 +53,15 @@
 				<ospf>
              <process-id>
 					<id>40</id>
-               <area>
-								<area-id>200</area-id>
-								<ipv4-range>
-									<range>
-										<ip>192.168.222.0</ip>
-										<mask>255.255.255.0</mask>
-									</range>
-								</ipv4-range>
-							</area>
-					<router-id>10.0.0.21</router-id>
+               				<router-id>10.0.0.21</router-id>
 					<network>
 						<ip>10.0.0.21</ip>
 						<wildcard>0.0.0.0</wildcard>
 						<area>0</area>
 					</network>
 					<network>
-						<ip>192.168.222.126</ip>
-						<wildcard>0.0.0.0</wildcard>
+						<ip>192.168.222.0</ip>
+						<wildcard>0.0.0.255</wildcard>
 						<area>0</area>
 					</network>
                <passive-interface>
