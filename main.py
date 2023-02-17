@@ -1,7 +1,8 @@
 import requests
 import threading
 from dev_info import *
-import json
+import time
+start = time.perf_counter()
 from urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
@@ -38,5 +39,8 @@ for t in threads:
 for t in threads:
     t.join()
 
+finish = time.perf_counter()
+
+print(f'Finished in {round(finish-start, 2)} second(s)')
 
 
