@@ -62,7 +62,7 @@
 					<network>
 						<ip>192.168.222.0</ip>
 						<wildcard>0.0.0.127</wildcard>
-						<area>200</area>
+						<area>0</area>
 					</network>
                     <network>
 						<ip>192.168.222.128</ip>
