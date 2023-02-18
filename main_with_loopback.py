@@ -5,9 +5,9 @@ from urllib3.exceptions import InsecureRequestWarning
 import time
 start = time.perf_counter()
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
-
+lock = threading.Lock()
 def configure_device(xml_payload,**dev_inf):
-    with threading.Lock(): # lock used to avoid race condition 
+        lock.acquire() # lock used to avoid race condition 
         response = requests.patch(
 	    url = dev_inf["host"] ,
 	    auth = (dev_inf["username"],dev_inf["password"]),
@@ -18,9 +18,10 @@ def configure_device(xml_payload,**dev_inf):
             print(" configuration successful",dev_inf["name"])
         else:
             print("Error configuring : " + str(response.status_code) + " " + response.text)
+        lock.release()
 
 def loobackN (xml_payload,**dev_inf):
-    with threading.Lock():
+        lock.acquire()
         for i in range(1,254):
             xml_payload1= xml_payload.format(name=i,ip_address= i )
             response = requests.patch(
@@ -33,6 +34,7 @@ def loobackN (xml_payload,**dev_inf):
              print(" loopback",i," successful",dev_inf["name"])
             else:
              print("Error configuring : " + str(response.status_code) + " " + response.text)
+        lock.release()
 
 
 threads = []
