@@ -43,11 +43,6 @@
 					<id>40</id>
 					<router-id>10.0.0.42</router-id>
 					<network>
-						<ip>172.30.20.0</ip>
-						<wildcard>0.0.0.255</wildcard>
-						<area>0</area>
-					</network>
-					<network>
 						<ip>10.41.42.0</ip>
 						<wildcard>0.0.0.3</wildcard>
 						<area>0</area>
