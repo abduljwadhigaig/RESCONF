@@ -33,7 +33,7 @@ def loobackN (xml_payload,**dev_inf):
 
 
 threads = []
-dev=["ciscoA","ciscoB","ciscoC","R21","R22","R11""R11"]
+dev=["ciscoA","ciscoB","ciscoC","R21","R22","R11"]
 for i in dev :
     xml_file_name=str(i)+".xml"
     dic_name=i
