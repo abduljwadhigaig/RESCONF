@@ -53,7 +53,7 @@
 						<area>0</area>
 					</network>
 					 <passive-interface>
-                  <interface> GigabitEthernet2 </interface> 
+                  <interface>GigabitEthernet2</interface> 
                </passive-interface>
 					 <redistribute>
 						<bgp>
