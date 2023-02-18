@@ -15,7 +15,7 @@ def configure_device(xml_payload,**dev_inf):
 	data = xml_payload ,
 	verify = False)
     if response.status_code == 204:
-        print(" configuration successful")
+        print(" configuration successful",dev_inf["name"])
     else:
         print("Error configuring : " + str(response.status_code) + " " + response.text)
 
