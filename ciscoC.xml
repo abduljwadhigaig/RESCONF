@@ -90,12 +90,6 @@
                         <mask>255.255.255.0</mask>
                       </with-mask>
                      </network>
-                      <network>
-                      <with-mask>
-                        <number>10.41.42.0</number>
-                        <mask>255.255.255.252</mask>
-                      </with-mask>
-                    </network>
                     <redistribute>
                       <ospf>
                         <id>40</id>
