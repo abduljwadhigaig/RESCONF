@@ -55,13 +55,3 @@ for t in threads:
 finish = time.perf_counter()
 
 print(f'Finished in {round(finish-start, 2)} second(s)')
-
-# interface gigabitEthernet 2
-# shutdown
-# interface gigabitEthernet 3
-# shutdown
-# interface gigabitEthernet 4
-# shutdown
-# exit
-# no router ospf 40
-# no router bgp 20
