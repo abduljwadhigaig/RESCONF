@@ -26,12 +26,7 @@ for i in dev :
     xml_file_name=str(i)+".xml"
     dic_name=i
     threads.append(threading.Thread(target=configure_device,args=[open(xml_file_name).read()],kwargs=eval(dic_name)))
-# threads.append(threading.Thread(target=configure_device,args=[open("ciscoB.xml").read()],kwargs=ciscoB))
-# threads.append(threading.Thread(target=configure_device,args=[open("ciscoC.xml").read()],kwargs=ciscoC))
-# threads.append(threading.Thread(target=configure_device,args=[open("R21.xml").read()],kwargs=R21))
-# threads.append(threading.Thread(target=configure_device,args=[open("R22.xml").read()],kwargs=R22))
-# threads.append(threading.Thread(target=configure_device,args=[open("R11.xml").read()],kwargs=R11))
-# Start all the threads
+
 for t in threads:
     t.start()
 
